@@ -1,14 +1,13 @@
 
 const cardsContainer = document.querySelector('.cards-container')
 
-
+// Fetch user data
 async function fetchPerson() {
     try {
         const response = await fetch('https://jsonplaceholder.typicode.com/users')
         const data = await response.json()
 
-        data.forEach((person) => renderCard(person.name, person.username, person.email, person.id
-        ))
+        data.forEach((person) => renderCard(person))
 
     } catch (error) {
         console.error(error)
@@ -17,25 +16,14 @@ async function fetchPerson() {
 
 fetchPerson()
 
-
-function renderCard(name, username, email, id) {
+// Render carts
+function renderCard(person) {
     cardsContainer.innerHTML +=
         `<div class='card'>
-    <h3>${username}</h3>
-    <img src="https://robohash.org/${id}.png?set=set4">
-    <p>${name}</p>
-    <p>${email}</p>
-    <p>${id}</p>
+    <h3>${person.username}</h3>
+    <img src="https://robohash.org/${person.id}.png?set=set4">
+    <p>${person.name}</p>
+    <p>${person.email}</p>
+    <p>${person.id}</p>
     </div>`
 }
-
-
-
-
-/*
-10 cards
-user names
-robohash image
-name email username and ID
-upload to github pages 
-*/
