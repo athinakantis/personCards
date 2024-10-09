@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body {
+    background-color: beige;
+    font-family: Verdana;
+}
+
+
+header {
+    padding: 0.3rem 1rem;
+    margin: 0 0 2rem;
+}
+
+.cards-container {
+    justify-content: center;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid grey;
+    padding: 2rem;
+    width: 300px;
+}
