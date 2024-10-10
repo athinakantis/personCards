@@ -21,7 +21,7 @@ function renderCard(person) {
     cardsContainer.innerHTML +=
         `<div class='card'>
     <h3>${person.username}</h3>
-    <img src="https://robohash.org/${person.id}.png?set=set4">
+    <img src="https://robohash.org/${person.id}.png?set=set4&size=200x200">
     <p>${person.name}</p>
     <p>${person.email}</p>
     <p>${person.id}</p>

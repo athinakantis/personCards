@@ -22,10 +22,6 @@ header {
     flex-wrap: wrap;
 }
 
-img {
-    width: 200px;
-    height: 200px;
-}
 
 .card {
     border: 1px solid grey;
